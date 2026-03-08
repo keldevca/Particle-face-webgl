@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Expérience WebGL - Visage en particules 3D avec animations faciales cinématographiques" />
+  <title>Particle Face — WebGL Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=JetBrains+Mono:wght@100..800&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+
+  <div id="ui-bg" class="ui-layer">
+    <nav class="navbar" style="opacity: 0; pointer-events: none">
+      <div class="logo">AURA<span class="accent">AI</span></div>
+    </nav>
+    <main class="hero">
+      <div class="hero-text">
+        <h1 class="title">
+          Digital <br />
+          <span class="gradient-text">Consciousness</span>
+        </h1>
+        <p class="subtitle">
+          Interact with the next generation of procedural neural rendering.
+          Move your cursor to establish connection.
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <canvas id="webgl-canvas"></canvas>
+
+  <div id="ui-fg" class="ui-layer">
+    <nav class="navbar">
+      <div class="logo">AURA<span class="accent">AI</span></div>
+      <ul class="nav-links">
+        <li><a href="#">Solutions</a></li>
+        <li><a href="#">Technology</a></li>
+        <li><a href="#">Neural Core</a></li>
+      </ul>
+      <a href="#" class="btn-nav">Access Portal</a>
+    </nav>
+
+    <main class="hero">
+      <div class="hero-text">
+
+        <h1 class="title" style="visibility: hidden">
+          Digital <br />
+          <span class="gradient-text">Consciousness</span>
+        </h1>
+        <p class="subtitle" style="visibility: hidden">
+          Interact with the next generation of procedural neural rendering.
+          Move your cursor to establish connection.
+        </p>
+        <div class="cta-group">
+          <button class="btn-primary">Initialize Sequence</button>
+          <button class="btn-outline">View Documentation</button>
+        </div>
+      </div>
+
+      <div class="hud left-hud">
+        <div class="hud-item">
+          <span class="hud-label">SYSTEM_STATE</span>
+          <span class="hud-value active">ONLINE</span>
+        </div>
+        <div class="hud-item">
+          <span class="hud-label">PARTICLE_COUNT</span>
+          <span class="hud-value">50,000</span>
+        </div>
+        <div class="hud-item">
+          <span class="hud-label">RENDER_ENGINE</span>
+          <span class="hud-value">WEBGL_2.0</span>
+        </div>
+      </div>
+
+      <div class="hud right-hud">
+        <div class="hud-item">
+          <span class="hud-label">SYNC_RATE</span>
+          <span class="hud-value">144Hz</span>
+        </div>
+        <div class="hud-item">
+          <span class="hud-label">NODE_LATENCY</span>
+          <span class="hud-value">4ms</span>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div id="loading-overlay">
+    <div class="loader-content">
+      <div class="loader-ring"></div>
+      <p class="loader-text">Generating particle face...</p>
+    </div>
+  </div>
+
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
